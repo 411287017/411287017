@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>導覽列</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- 導覽列開始 -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">我的網站</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">我的習題 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">我的筆記</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">我的報告</a>
+            </li>
+        </ul>
+        <!-- 在線上資源按鈕中新增超連接功能 -->
+        <a class="btn btn-primary ml-auto" href="https://example.com">線上資源</a>
+    </div>
+</nav>
+<!-- 導覽列結束 -->
+
+
+    <!-- 引入 Bootstrap JavaScript (可選) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+
+<script>
+ /// JavaScript 程式碼
+document.addEventListener("DOMContentLoaded", function() {
+    // 取得線上資源按鈕元素
+    var onlineResourceButton = document.querySelector(".btn-primary");
+
+    // 定義兩個超連接URL
+    var url1 = "https://www.youtube.com/watch?v=j-Vo6ORclzA&list=PLAp63VUXBDg7R5kxD90O9wzGN6H1I6TDz&ab_channel=.DeltaMOOCx";
+    var url2 = "https://www.youtube.com/watch?v=EDYjPpn1OmE&list=PLil-R4o6jmGiDc1CC8PyBbasl8kR9r8Wr&ab_channel=%E8%87%BA%E5%A4%A7%E7%A7%91%E5%AD%B8%E6%95%99%E8%82%B2%E7%99%BC%E5%B1%95%E4%B8%AD%E5%BF%83CASE";
+
+    // 在按鈕被點擊時，彈出選擇框供選擇
+    onlineResourceButton.addEventListener("click", function() {
+        var choice = prompt("請選擇連結：\n1. 基本電學\n2. 計概");
+
+        // 根據使用者的選擇，導向相應的超連接
+        if (choice === "1") {
+            window.location.href = url1;
+        } else if (choice === "2") {
+            window.location.href = url2;
+        } else {
+            alert("請輸入有效選項（1或2）");
+        }
+    });
+});
+
+
+</script>
+</body>
+</html>
